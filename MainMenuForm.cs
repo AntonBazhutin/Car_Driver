@@ -1,8 +1,10 @@
-﻿using System;
+﻿using CarDriver2.Properties;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -107,7 +109,17 @@ namespace CarDriver2
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-            FileManager.Load_Score();
+            if (File.Exists("score_2.dat") && File.Exists("score.dat"))
+            {
+                FileManager.Load_Score();
+                FileManager.Load_TotalScore();
+                Settings.Default.Coins = FileManager.Load_TotalScore().Coins;
+                Settings.Default.Score = FileManager.Load_TotalScore().Score;
+                Settings.Default.Record = FileManager.Load_TotalScore().Record;
+                Settings.Default.Speed = FileManager.Load_TotalScore().Speed;
+                Settings.Default.Min = FileManager.Load_TotalScore().Min;
+                Settings.Default.Sec = FileManager.Load_TotalScore().Sec;
+            }
         }
 
         private void btnStore_MouseMove(object sender, MouseEventArgs e)

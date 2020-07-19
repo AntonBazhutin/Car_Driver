@@ -19,7 +19,7 @@ namespace CarDriver2
         private int score = 0;
         private int x, y;
         private int speed = 20;
-
+        private int record = 0;
         public GameForm()
         {
             InitializeComponent();
@@ -27,6 +27,8 @@ namespace CarDriver2
 
         private void GameForm_Load(object sender, EventArgs e)
         {
+            if (Settings.Default.Record != 0)
+                labelRecord.Text = Settings.Default.Record.ToString();
             GetPictureOfEnemy();
             GameTimer.Start();
             Random rand = new Random();
@@ -131,10 +133,20 @@ namespace CarDriver2
             {
                 timer1.Enabled = false;
                 GameTimer.Enabled = false;
+
+                Settings.Default.Sec += seconds;
+                Settings.Default.Min += minutes;
                 Settings.Default.Coins += coins;
                 Settings.Default.Score += score;
-                //FileManager.Save_Score(new GameResult(score, coins, speed, minutes, seconds));
-                //FileManager.Save_DB(new DataBase(score, coins, speed, minutes, seconds));
+
+                if (speed > Settings.Default.Speed)
+                    Settings.Default.Speed = speed;
+                if (score > Settings.Default.Record)
+                    Settings.Default.Record = score;
+
+                FileManager.Save_Score(new GameResult(score, coins, speed, minutes, seconds));
+                FileManager.Save_TotalScore(new TotalGameInfo(Settings.Default.Record, Settings.Default.Score, Settings.Default.Coins, Settings.Default.Speed, Settings.Default.Min, Settings.Default.Sec));
+
                 this.Hide();
                 GameOver gameover = new GameOver();
                 gameover.ShowDialog();

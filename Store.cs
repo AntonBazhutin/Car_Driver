@@ -41,16 +41,14 @@ namespace CarDriver2
 
         private void Store_Load(object sender, EventArgs e)
         {
-            labelNameOfCar.Parent = pictureBox1;
-            labelNameOfCar.BackColor = Color.Transparent;
-            labelCostOfCar.Parent = pictureBox1;
-            labelCostOfCar.BackColor = Color.Transparent;
+            txtBxMyCoins.Text = DataSaver.totalGameInfo.Coins.ToString();
+            //labelYourCoins.Parent = pictureBox1;
+            //labelYourCoins.BackColor = Color.Transparent;
             labelStore.Parent = pictureBox1;
             labelStore.BackColor = Color.Transparent;
-            labelCOC.Text = "0";
             pbCars.Image = imageListCars.Images[0];
-            labelCostOfCar.Text = '"' + CostOfCars[0] + '"';
-            labelNameOfCar.Text = '"' + NamesOfCars[0] + '"';
+            txtBxCost.Text = CostOfCars[0];
+            txtBxName.Text = '"' + NamesOfCars[0] + '"';
 
         }
 
@@ -69,8 +67,8 @@ namespace CarDriver2
             {
                 index++;
                 pbCars.Image = imageListCars.Images[index];
-                labelCostOfCar.Text = '"' + CostOfCars[index] + '"';
-                labelNameOfCar.Text = '"' + NamesOfCars[index] + '"';
+                txtBxCost.Text = CostOfCars[index];
+                txtBxName.Text = '"' + NamesOfCars[index] + '"';
             }
         }
 
@@ -80,8 +78,8 @@ namespace CarDriver2
             {
                 index--;
                 pbCars.Image = imageListCars.Images[index];
-                labelCostOfCar.Text = '"' + CostOfCars[index] + '"';
-                labelNameOfCar.Text = '"' + NamesOfCars[index] + '"';
+                txtBxCost.Text = CostOfCars[index];
+                txtBxName.Text = '"' + NamesOfCars[index] + '"';
             }
         }
     }

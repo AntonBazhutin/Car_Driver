@@ -47,7 +47,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DataSaver.cs" />
-    <Compile Include="Car.cs" />
     <Compile Include="FileManager.cs" />
     <Compile Include="GameForm.cs">
       <SubType>Form</SubType>
@@ -88,6 +87,7 @@
     <Compile Include="Store.Designer.cs">
       <DependentUpon>Store.cs</DependentUpon>
     </Compile>
+    <Compile Include="TotalGameInfo.cs" />
     <EmbeddedResource Include="GameForm.resx">
       <DependentUpon>GameForm.cs</DependentUpon>
     </EmbeddedResource>

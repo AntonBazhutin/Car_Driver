@@ -37,5 +37,32 @@ namespace CarDriver2
             }
             return result;
         }
+        public static void Save_TotalScore(TotalGameInfo result)
+        {
+            DataSaver.totalGameInfo = result;
+            BinaryFormatter bf = new BinaryFormatter();
+
+            using (StreamWriter sw = new StreamWriter("score_2.dat"))
+            {
+                bf.Serialize(sw.BaseStream, result);
+            }
+        }
+
+        public static TotalGameInfo Load_TotalScore()
+        {
+            TotalGameInfo result = null;
+
+            if (File.Exists("score_2.dat"))
+            {
+                BinaryFormatter bf = new BinaryFormatter();
+
+                using (StreamReader sw = new StreamReader("score_2.dat"))
+                {
+                    result = (TotalGameInfo)bf.Deserialize(sw.BaseStream);
+                    DataSaver.totalGameInfo = result;
+                }
+            }
+            return result;
+        }
     }
 }
