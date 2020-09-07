@@ -94,5 +94,53 @@ namespace CarDriver2.Properties {
                 this["Sec"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool Blue_Mustang {
+            get {
+                return ((bool)(this["Blue_Mustang"]));
+            }
+            set {
+                this["Blue_Mustang"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool Green_Cabrio {
+            get {
+                return ((bool)(this["Green_Cabrio"]));
+            }
+            set {
+                this["Green_Cabrio"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool Yellow_Lambo {
+            get {
+                return ((bool)(this["Yellow_Lambo"]));
+            }
+            set {
+                this["Yellow_Lambo"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool Red_Porsche {
+            get {
+                return ((bool)(this["Red_Porsche"]));
+            }
+            set {
+                this["Red_Porsche"] = value;
+            }
+        }
     }
 }

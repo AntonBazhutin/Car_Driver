@@ -84,6 +84,7 @@
             this.btnBuy.TabIndex = 14;
             this.btnBuy.Text = "Buy";
             this.btnBuy.UseVisualStyleBackColor = false;
+            this.btnBuy.Click += new System.EventHandler(this.btnBuy_Click);
             this.btnBuy.MouseLeave += new System.EventHandler(this.btnBuy_MouseLeave);
             this.btnBuy.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btnBuy_MouseMove);
             // 
@@ -106,8 +107,8 @@
             this.imageListCars.TransparentColor = System.Drawing.Color.Transparent;
             this.imageListCars.Images.SetKeyName(0, "Blue Mustang irl.jpg");
             this.imageListCars.Images.SetKeyName(1, "Green Cabrio irl.jpg");
-            this.imageListCars.Images.SetKeyName(2, "Red Porsche irl.jpg");
-            this.imageListCars.Images.SetKeyName(3, "Yellow Lambo irl.jpg");
+            this.imageListCars.Images.SetKeyName(2, "Yellow Lambo irl.jpg");
+            this.imageListCars.Images.SetKeyName(3, "Red Porsche irl.jpg");
             // 
             // pictureBox1
             // 
@@ -143,6 +144,8 @@
             this.btnGoLeft.Text = "<";
             this.btnGoLeft.UseVisualStyleBackColor = false;
             this.btnGoLeft.Click += new System.EventHandler(this.btnGoLeft_Click);
+            this.btnGoLeft.MouseLeave += new System.EventHandler(this.btnGoLeft_MouseLeave);
+            this.btnGoLeft.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btnGoLeft_MouseMove);
             // 
             // btnGoRight
             // 
@@ -156,11 +159,14 @@
             this.btnGoRight.Text = ">";
             this.btnGoRight.UseVisualStyleBackColor = false;
             this.btnGoRight.Click += new System.EventHandler(this.btnGoRight_Click);
+            this.btnGoRight.MouseLeave += new System.EventHandler(this.btnGoRight_MouseLeave);
+            this.btnGoRight.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btnGoRight_MouseMove);
             // 
             // txtBxName
             // 
             this.txtBxName.BackColor = System.Drawing.Color.White;
             this.txtBxName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtBxName.Cursor = System.Windows.Forms.Cursors.No;
             this.txtBxName.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.txtBxName.HideSelection = false;
             this.txtBxName.Location = new System.Drawing.Point(364, 157);
@@ -176,19 +182,23 @@
             // 
             this.txtBxCost.BackColor = System.Drawing.Color.White;
             this.txtBxCost.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtBxCost.Cursor = System.Windows.Forms.Cursors.No;
             this.txtBxCost.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.txtBxCost.Location = new System.Drawing.Point(441, 527);
+            this.txtBxCost.Location = new System.Drawing.Point(406, 524);
             this.txtBxCost.Name = "txtBxCost";
             this.txtBxCost.ReadOnly = true;
-            this.txtBxCost.Size = new System.Drawing.Size(121, 38);
+            this.txtBxCost.Size = new System.Drawing.Size(194, 38);
             this.txtBxCost.TabIndex = 24;
+            this.txtBxCost.Text = "Purchased";
             this.txtBxCost.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtBxCost.WordWrap = false;
+            this.txtBxCost.TextChanged += new System.EventHandler(this.txtBxCost_TextChanged);
             // 
             // txtBxMyCoins
             // 
             this.txtBxMyCoins.BackColor = System.Drawing.Color.White;
             this.txtBxMyCoins.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtBxMyCoins.Cursor = System.Windows.Forms.Cursors.No;
             this.txtBxMyCoins.Font = new System.Drawing.Font("OCR A Extended", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBxMyCoins.Location = new System.Drawing.Point(889, 22);
             this.txtBxMyCoins.Name = "txtBxMyCoins";

@@ -38,7 +38,7 @@
             // 
             this.btnBack.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBack.Font = new System.Drawing.Font("Matura MT Script Capitals", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBack.Font = new System.Drawing.Font("OCR A Extended", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBack.Location = new System.Drawing.Point(868, 629);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(128, 46);

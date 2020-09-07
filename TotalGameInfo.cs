@@ -5,7 +5,6 @@ namespace CarDriver2
     [Serializable]
     public class TotalGameInfo
     {
-        private int record;
         private int score;
         private int coins;
         private int speed;

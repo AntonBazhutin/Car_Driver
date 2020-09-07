@@ -1,8 +1,10 @@
-﻿using System;
+﻿using CarDriver2.Properties;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -37,7 +39,10 @@ namespace CarDriver2
 
         private void Garage_Load(object sender, EventArgs e)
         {
+            if (File.Exists("items.dat"))
+            { 
 
+            }
         }
     }
 }

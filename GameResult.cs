@@ -9,7 +9,6 @@ namespace CarDriver2
     [Serializable]
     public class GameResult
     {
-        //private int record;
         private int score;
         private int coins;
         private int speed;
@@ -40,11 +39,6 @@ namespace CarDriver2
             get { return sec; }
             set { sec = value; }
         }
-
-        //public int Record
-        //{
-        //    get; set;
-        //}
         public GameResult(int score, int coins, int speed, int min, int sec)
         {
             Score = score;
@@ -53,14 +47,5 @@ namespace CarDriver2
             Min = min;
             Sec = sec;
         }
-        //public GameResult(int record,int score, int coins, int speed, int min, int sec)
-        //{
-        //    Record = record;
-        //    Score = score;
-        //    Coins = coins;
-        //    Speed = speed;
-        //    Min = min;
-        //    Sec = sec;
-        //}
     }
 }

@@ -36,6 +36,7 @@
             this.btnVolumeOnOff = new System.Windows.Forms.Button();
             this.pictureBxMainScreen = new System.Windows.Forms.PictureBox();
             this.btnStore = new System.Windows.Forms.Button();
+            this.btnNewGame = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBxMainScreen)).BeginInit();
             this.SuspendLayout();
             // 
@@ -44,6 +45,7 @@
             this.btnPlay.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.btnPlay.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPlay.Font = new System.Drawing.Font("OCR A Extended", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPlay.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnPlay.Location = new System.Drawing.Point(452, 273);
             this.btnPlay.Name = "btnPlay";
             this.btnPlay.Size = new System.Drawing.Size(128, 46);
@@ -124,7 +126,6 @@
             this.pictureBxMainScreen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBxMainScreen.TabIndex = 0;
             this.pictureBxMainScreen.TabStop = false;
-            this.pictureBxMainScreen.Click += new System.EventHandler(this.pictureBxMainScreen_Click);
             // 
             // btnStore
             // 
@@ -141,11 +142,28 @@
             this.btnStore.MouseLeave += new System.EventHandler(this.btnStore_MouseLeave);
             this.btnStore.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btnStore_MouseMove);
             // 
+            // btnNewGame
+            // 
+            this.btnNewGame.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.btnNewGame.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNewGame.Font = new System.Drawing.Font("OCR A Extended", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNewGame.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnNewGame.Location = new System.Drawing.Point(452, 195);
+            this.btnNewGame.Name = "btnNewGame";
+            this.btnNewGame.Size = new System.Drawing.Size(128, 46);
+            this.btnNewGame.TabIndex = 8;
+            this.btnNewGame.Text = "New Game";
+            this.btnNewGame.UseVisualStyleBackColor = false;
+            this.btnNewGame.Click += new System.EventHandler(this.btnNewGame_Click);
+            this.btnNewGame.MouseLeave += new System.EventHandler(this.btnNewGame_MouseLeave);
+            this.btnNewGame.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btnNewGame_MouseMove);
+            // 
             // MainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1008, 687);
+            this.Controls.Add(this.btnNewGame);
             this.Controls.Add(this.btnStore);
             this.Controls.Add(this.btnVolumeOnOff);
             this.Controls.Add(this.btnExit);
@@ -174,6 +192,7 @@
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Button btnVolumeOnOff;
         private System.Windows.Forms.Button btnStore;
+        private System.Windows.Forms.Button btnNewGame;
     }
 }
 

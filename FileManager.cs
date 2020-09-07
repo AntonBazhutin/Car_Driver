@@ -64,5 +64,32 @@ namespace CarDriver2
             }
             return result;
         }
+
+        public static void Save_Items(purchasedItems result)
+        {
+            DataSaver.getItems = result;
+            BinaryFormatter bf = new BinaryFormatter();
+
+            using (StreamWriter sw = new StreamWriter("purchasedItems.dat"))
+            {
+                bf.Serialize(sw.BaseStream, result);
+            }
+        }
+        public static purchasedItems Load_Items()
+        {
+            purchasedItems result = null;
+
+            if (File.Exists("purchasedItems.dat"))
+            {
+                BinaryFormatter bf = new BinaryFormatter();
+
+                using (StreamReader sw = new StreamReader("purchasedItems.dat"))
+                {
+                    result = (purchasedItems)bf.Deserialize(sw.BaseStream);
+                    DataSaver.getItems = result;
+                }
+            }
+            return result;
+        }
     }
 }

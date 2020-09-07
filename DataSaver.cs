@@ -10,5 +10,7 @@ namespace CarDriver2
     {
         public static GameResult LastGameInfo { get; set; }
         public static TotalGameInfo totalGameInfo { get; set; }
+
+        public static purchasedItems getItems { get; set; }
     }
 }

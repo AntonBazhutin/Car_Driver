@@ -21,7 +21,6 @@ namespace CarDriver2
             InitializeComponent();
             mediaPlayer.URL = "theme_song.mp3";
             mediaPlayer.enabled = true;
-
         }
 
         bool clicked = false;
@@ -109,6 +108,8 @@ namespace CarDriver2
 
         private void MainForm_Load(object sender, EventArgs e)
         {
+            mediaPlayer.controls.play();
+
             if (File.Exists("score_2.dat") && File.Exists("score.dat"))
             {
                 FileManager.Load_Score();
@@ -119,7 +120,11 @@ namespace CarDriver2
                 Settings.Default.Speed = FileManager.Load_TotalScore().Speed;
                 Settings.Default.Min = FileManager.Load_TotalScore().Min;
                 Settings.Default.Sec = FileManager.Load_TotalScore().Sec;
+
+                btnNewGame.Enabled = true;
             }
+            else
+                btnNewGame.Enabled = false;
         }
 
         private void btnStore_MouseMove(object sender, MouseEventArgs e)
@@ -159,9 +164,26 @@ namespace CarDriver2
             this.Close();
         }
 
-        private void pictureBxMainScreen_Click(object sender, EventArgs e)
+        private void btnNewGame_Click(object sender, EventArgs e)
         {
+            NewGame ng = new NewGame();
 
+            if (ng.ShowDialog() == DialogResult.OK)
+            {
+
+            }
+
+            btnNewGame.Enabled = false;
+        }
+
+        private void btnNewGame_MouseMove(object sender, MouseEventArgs e)
+        {
+            btnNewGame.BackColor = Color.White;
+        }
+
+        private void btnNewGame_MouseLeave(object sender, EventArgs e)
+        {
+            btnNewGame.BackColor = Color.Gray;
         }
     }
 }
