@@ -15,7 +15,7 @@ namespace CarDriver2
 {
     public partial class GameForm : Form
     {
-        private int coins = 10000;
+        private int coins = 0;
         private int score = 0;
         private int x, y;
         private int speed = 20;
