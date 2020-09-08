@@ -196,6 +196,8 @@ namespace CarDriver2
                         }
                     }
 
+                    txtBxCost.Text = "Purchased";
+
                     MessageBox.Show("Selected item successfully purchased");
                 }
                 else
