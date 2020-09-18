@@ -108,23 +108,56 @@ namespace CarDriver2
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-            mediaPlayer.controls.play();
+            string[] names = new string[] { "purchasedItems.dat", "score.dat", "score_2.dat", "chosenCar.dat" };
 
-            if (File.Exists("score_2.dat") && File.Exists("score.dat"))
+            foreach (var file in names)
             {
-                FileManager.Load_Score();
-                FileManager.Load_TotalScore();
-                Settings.Default.Coins = FileManager.Load_TotalScore().Coins;
-                Settings.Default.Score = FileManager.Load_TotalScore().Score;
-                Settings.Default.Record = FileManager.Load_TotalScore().Record;
-                Settings.Default.Speed = FileManager.Load_TotalScore().Speed;
-                Settings.Default.Min = FileManager.Load_TotalScore().Min;
-                Settings.Default.Sec = FileManager.Load_TotalScore().Sec;
-
-                btnNewGame.Enabled = true;
+                if (!File.Exists($"{file}"))
+                    File.Create(file).Close();
             }
-            else
-                btnNewGame.Enabled = false;
+
+            var fi = new FileInfo("chosenCar.dat");
+            if (fi.Length == 0)
+                FileManager.Save_chosenCar(new storeChosenCar("Blue Mustang", 0, true));
+            fi = new FileInfo("score.dat");
+            if (fi.Length == 0)
+                FileManager.Save_Score(new GameResult(0, 0, 0, 0, 0));
+            fi = new FileInfo("score_2.dat");
+            if (fi.Length == 0)
+                FileManager.Save_TotalScore(new TotalGameInfo(0, 0, 0, 0, 0, 0));
+            fi = new FileInfo("purchasedItems.dat");
+            if (fi.Length == 0)
+                FileManager.Save_Items(new purchasedItems(true, false, false, false));
+
+            Settings.Default.Score = FileManager.Load_TotalScore().Score;
+            Settings.Default.Sec = FileManager.Load_TotalScore().Sec;
+            Settings.Default.Speed = FileManager.Load_TotalScore().Speed;
+            Settings.Default.Record = FileManager.Load_TotalScore().Record;
+            Settings.Default.Coins = FileManager.Load_TotalScore().Coins;
+            Settings.Default.Min = FileManager.Load_TotalScore().Min;
+            //if (File.Exists("score_2.dat") && File.Exists("score.dat"))
+            //{
+            //    FileManager.Load_Score();
+            //    FileManager.Load_TotalScore();
+            //    Settings.Default.Coins = FileManager.Load_TotalScore().Coins;
+            //    Settings.Default.Score = FileManager.Load_TotalScore().Score;
+            //    Settings.Default.Record = FileManager.Load_TotalScore().Record;
+            //    Settings.Default.Speed = FileManager.Load_TotalScore().Speed;
+            //    Settings.Default.Min = FileManager.Load_TotalScore().Min;
+            //    Settings.Default.Sec = FileManager.Load_TotalScore().Sec;
+
+            //    btnNewGame.Enabled = true;
+            //}
+            //else
+            //    btnNewGame.Enabled = false;
+
+            //if (!File.Exists("chosenCar.dat"))
+            //{
+            //    File.Create("chosenCar.dat").Close();
+            //    FileManager.Save_chosenCar(new storeChosenCar("Blue Mustang", 0, true));
+            //}
+
+            mediaPlayer.controls.play();
         }
 
         private void btnStore_MouseMove(object sender, MouseEventArgs e)
@@ -166,14 +199,11 @@ namespace CarDriver2
 
         private void btnNewGame_Click(object sender, EventArgs e)
         {
+            mediaPlayer.controls.stop();
+            this.Hide();
             NewGame ng = new NewGame();
-
-            if (ng.ShowDialog() == DialogResult.OK)
-            {
-
-            }
-
-            btnNewGame.Enabled = false;
+            ng.ShowDialog();
+            this.Close();
         }
 
         private void btnNewGame_MouseMove(object sender, MouseEventArgs e)
@@ -184,6 +214,11 @@ namespace CarDriver2
         private void btnNewGame_MouseLeave(object sender, EventArgs e)
         {
             btnNewGame.BackColor = Color.Gray;
+        }
+
+        private void pictureBxMainScreen_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

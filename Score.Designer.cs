@@ -268,7 +268,6 @@
             // 
             // pbLastCar
             // 
-            this.pbLastCar.Image = global::CarDriver2.Properties.Resources.default_car;
             this.pbLastCar.Location = new System.Drawing.Point(204, 351);
             this.pbLastCar.Name = "pbLastCar";
             this.pbLastCar.Size = new System.Drawing.Size(61, 130);

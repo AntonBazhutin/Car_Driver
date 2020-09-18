@@ -13,7 +13,7 @@ namespace CarDriver2
         List<storeAbstractCar> listOfCars = new List<storeAbstractCar>();
         string[] NamesOfCars = new string[] { "Blue Mustang", "Green Cabrio", "Yellow Lambo", "Red Porsche" };
 
-        int[] CostOfCars = new int[] { 0, 150, 500, 750 };
+        int[] CostOfCars = new int[] { 0, 50, 150, 500 };
         int index = 0;
         public Store()
         {
@@ -39,42 +39,30 @@ namespace CarDriver2
 
         private void Store_Load(object sender, EventArgs e)
         {
-            if (!File.Exists("purchasedItems.dat"))
-            {
-                File.Create("purchasedItems.dat").Close();
-
-                Settings.Default.Blue_Mustang = true;
-                Settings.Default.Green_Cabrio = false;
-                Settings.Default.Yellow_Lambo = false;
-                Settings.Default.Red_Porsche = false;
-
-                FileManager.Save_Items(new purchasedItems(Settings.Default.Blue_Mustang, Settings.Default.Green_Cabrio, Settings.Default.Yellow_Lambo, Settings.Default.Red_Porsche));
-            }
-
             for (int i = 0; i < NamesOfCars.Length; i++)
             {
                 switch (i)
                 {
                     case 0:
-                        listOfCars.Add(new storeIsBoughtCar("Blue Mustang", 0, true));
+                        listOfCars.Add(new storeIsBoughtCar(NamesOfCars[i], CostOfCars[i], true));
                         break;
                     case 1:
                         if (FileManager.Load_Items().Green == true)
-                            listOfCars.Add(new storeIsBoughtCar("Green Cabrio", 150, true));
+                            listOfCars.Add(new storeIsBoughtCar(NamesOfCars[i], CostOfCars[i], true));
                         else
-                            listOfCars.Add(new storeCar("Green Cabrio", 150));
+                            listOfCars.Add(new storeCar(NamesOfCars[i], CostOfCars[i]));
                         break;
                     case 2:
                         if (FileManager.Load_Items().Yellow == true)
-                            listOfCars.Add(new storeIsBoughtCar("Yellow Lambo", 500, true));
+                            listOfCars.Add(new storeIsBoughtCar(NamesOfCars[i], CostOfCars[i], true));
                         else
-                            listOfCars.Add(new storeCar("Yellow Lambo", 500));
+                            listOfCars.Add(new storeCar(NamesOfCars[i], CostOfCars[i]));
                         break;
                     case 3:
                         if (FileManager.Load_Items().Red == true)
-                            listOfCars.Add(new storeIsBoughtCar("Red Porsche", 750, true));
+                            listOfCars.Add(new storeIsBoughtCar(NamesOfCars[i], CostOfCars[i], true));
                         else
-                            listOfCars.Add(new storeCar("Red Porsche", 750));
+                            listOfCars.Add(new storeCar(NamesOfCars[i], CostOfCars[i]));
                         break;
                     default: break;
                 }
@@ -172,25 +160,25 @@ namespace CarDriver2
                         switch (i)
                         {
                             case 0:
-                                listOfCars.Add(new storeIsBoughtCar("Blue Mustang", 0, true));
+                                listOfCars.Add(new storeIsBoughtCar(NamesOfCars[i], CostOfCars[i], true));
                                 break;
                             case 1:
                                 if (FileManager.Load_Items().Green == true)
-                                    listOfCars.Add(new storeIsBoughtCar("Green Cabrio", 150, true));
+                                    listOfCars.Add(new storeIsBoughtCar(NamesOfCars[i], CostOfCars[i], true));
                                 else
-                                    listOfCars.Add(new storeCar("Green Cabrio", 150));
+                                    listOfCars.Add(new storeCar(NamesOfCars[i], CostOfCars[i]));
                                 break;
                             case 2:
                                 if (FileManager.Load_Items().Yellow == true)
-                                    listOfCars.Add(new storeIsBoughtCar("Yellow Lambo", 500, true));
+                                    listOfCars.Add(new storeIsBoughtCar(NamesOfCars[i], CostOfCars[i], true));
                                 else
-                                    listOfCars.Add(new storeCar("Yellow Lambo", 500));
+                                    listOfCars.Add(new storeCar(NamesOfCars[i], CostOfCars[i]));
                                 break;
                             case 3:
                                 if (FileManager.Load_Items().Red == true)
-                                    listOfCars.Add(new storeIsBoughtCar("Red Porsche", 750, true));
+                                    listOfCars.Add(new storeIsBoughtCar(NamesOfCars[i], CostOfCars[i], true));
                                 else
-                                    listOfCars.Add(new storeCar("Red Porsche", 750));
+                                    listOfCars.Add(new storeCar(NamesOfCars[i], CostOfCars[i]));
                                 break;
                             default: break;
                         }
@@ -233,6 +221,11 @@ namespace CarDriver2
                 txtBxCost.Text = "Purchased";
             else
                 txtBxCost.Text = listOfCars[index].Cost.ToString();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

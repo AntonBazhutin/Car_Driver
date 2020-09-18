@@ -143,11 +143,11 @@
             // 
             // pictureBxMyCar
             // 
-            this.pictureBxMyCar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBxMyCar.BackgroundImage")));
             this.pictureBxMyCar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBxMyCar.Location = new System.Drawing.Point(322, 564);
             this.pictureBxMyCar.Name = "pictureBxMyCar";
             this.pictureBxMyCar.Size = new System.Drawing.Size(38, 80);
+            this.pictureBxMyCar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBxMyCar.TabIndex = 0;
             this.pictureBxMyCar.TabStop = false;
             // 

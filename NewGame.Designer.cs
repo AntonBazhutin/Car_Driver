@@ -40,7 +40,7 @@
             this.panel1.Controls.Add(this.btnNo);
             this.panel1.Controls.Add(this.btnYes);
             this.panel1.ForeColor = System.Drawing.Color.Black;
-            this.panel1.Location = new System.Drawing.Point(54, 94);
+            this.panel1.Location = new System.Drawing.Point(359, 332);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(292, 69);
             this.panel1.TabIndex = 2;
@@ -57,6 +57,7 @@
             this.btnNo.TabIndex = 6;
             this.btnNo.Text = "No";
             this.btnNo.UseVisualStyleBackColor = true;
+            this.btnNo.Click += new System.EventHandler(this.btnNo_Click);
             this.btnNo.MouseLeave += new System.EventHandler(this.btnNo_MouseLeave);
             this.btnNo.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btnNo_MouseMove);
             // 
@@ -79,11 +80,11 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("OCR A Extended", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("OCR A Extended", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(23, 39);
+            this.label1.Location = new System.Drawing.Point(214, 249);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(359, 17);
+            this.label1.Size = new System.Drawing.Size(637, 29);
             this.label1.TabIndex = 3;
             this.label1.Text = "Do you want to delete all the progress?";
             // 
@@ -92,13 +93,13 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ClientSize = new System.Drawing.Size(404, 198);
+            this.ClientSize = new System.Drawing.Size(1008, 687);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(420, 237);
+            this.MaximumSize = new System.Drawing.Size(1024, 726);
             this.MinimizeBox = false;
-            this.MinimumSize = new System.Drawing.Size(420, 237);
+            this.MinimumSize = new System.Drawing.Size(1024, 726);
             this.Name = "NewGame";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

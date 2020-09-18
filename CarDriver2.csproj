@@ -60,6 +60,7 @@
     <Compile Include="GameOver.Designer.cs">
       <DependentUpon>GameOver.cs</DependentUpon>
     </Compile>
+    <Compile Include="Car.cs" />
     <Compile Include="MainMenuForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -81,6 +82,11 @@
     <Compile Include="Garage.Designer.cs">
       <DependentUpon>Garage.cs</DependentUpon>
     </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="purchasedItems.cs" />
     <Compile Include="Score.cs">
       <SubType>Form</SubType>
@@ -96,6 +102,7 @@
     </Compile>
     <Compile Include="storeAbstractCar.cs" />
     <Compile Include="storeCar.cs" />
+    <Compile Include="storeChosenCar.cs" />
     <Compile Include="storeIsBoughtCar.cs" />
     <Compile Include="TotalGameInfo.cs" />
     <EmbeddedResource Include="GameForm.resx">
@@ -112,14 +119,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <EmbeddedResource Include="Garage.resx">
       <DependentUpon>Garage.cs</DependentUpon>
     </EmbeddedResource>
@@ -171,18 +173,6 @@
     <None Include="images\other_car2.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="images\default_car.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="images\green_muscle_car.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="images\lambo.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="images\red_muscle_car.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="images\police.png" />
   </ItemGroup>
   <ItemGroup>
@@ -190,6 +180,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="images\embulance.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\Blue Mustang.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

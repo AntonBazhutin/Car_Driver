@@ -91,5 +91,32 @@ namespace CarDriver2
             }
             return result;
         }
+
+        public static void Save_chosenCar(storeChosenCar result)
+        {
+            DataSaver.getChosenCar = result;
+            BinaryFormatter bf = new BinaryFormatter();
+
+            using (StreamWriter sw = new StreamWriter("chosenCar.dat"))
+            {
+                bf.Serialize(sw.BaseStream, result);
+            }
+        }
+        public static storeChosenCar Load_chosenCar()
+        {
+            storeChosenCar result = null;
+
+            if (File.Exists("chosenCar.dat"))
+            {
+                BinaryFormatter bf = new BinaryFormatter();
+
+                using (StreamReader sw = new StreamReader("chosenCar.dat"))
+                {
+                    result = (storeChosenCar)bf.Deserialize(sw.BaseStream);
+                    DataSaver.getChosenCar = result;
+                }
+            }
+            return result;
+        }
     }
 }

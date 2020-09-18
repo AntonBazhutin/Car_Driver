@@ -120,6 +120,7 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // pbCars
             // 
@@ -184,7 +185,7 @@
             this.txtBxCost.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtBxCost.Cursor = System.Windows.Forms.Cursors.No;
             this.txtBxCost.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.txtBxCost.Location = new System.Drawing.Point(406, 524);
+            this.txtBxCost.Location = new System.Drawing.Point(405, 531);
             this.txtBxCost.Name = "txtBxCost";
             this.txtBxCost.ReadOnly = true;
             this.txtBxCost.Size = new System.Drawing.Size(194, 38);

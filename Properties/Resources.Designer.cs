@@ -63,39 +63,9 @@ namespace CarDriver2.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap default_car {
-            get {
-                object obj = ResourceManager.GetObject("default_car", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap embulance {
             get {
                 object obj = ResourceManager.GetObject("embulance", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap green_muscle_car {
-            get {
-                object obj = ResourceManager.GetObject("green_muscle_car", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap lambo {
-            get {
-                object obj = ResourceManager.GetObject("lambo", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -116,16 +86,6 @@ namespace CarDriver2.Properties {
         internal static System.Drawing.Bitmap police {
             get {
                 object obj = ResourceManager.GetObject("police", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap red_muscle_car {
-            get {
-                object obj = ResourceManager.GetObject("red_muscle_car", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -19,12 +19,17 @@ namespace CarDriver2
 
         private void btnYes_Click(object sender, EventArgs e)
         {
-            if (File.Exists("purchasedItems.dat"))
-                File.Delete("purchasedItems.dat");
-            if (File.Exists("score.dat"))
-                File.Delete("score.dat");
-            if (File.Exists("score_2.dat"))
-                File.Delete("score_2.dat");
+            string[] paths = new string[] { "purchasedItems.dat", "score.dat", "score_2.dat", "chosenCar.dat" };
+
+            foreach (var file in paths)
+            {
+                File.WriteAllText($"{file}", string.Empty);
+            }
+
+            this.Hide();
+            MainMenu mm = new MainMenu();
+            mm.ShowDialog();
+            this.Close();
         }
 
         private void btnYes_MouseLeave(object sender, EventArgs e)
@@ -54,6 +59,14 @@ namespace CarDriver2
         private void NewGame_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnNo_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            MainMenu mm = new MainMenu();
+            mm.ShowDialog();
+            this.Close();
         }
     }
 }

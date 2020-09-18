@@ -126,6 +126,7 @@
             this.pictureBxMainScreen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBxMainScreen.TabIndex = 0;
             this.pictureBxMainScreen.TabStop = false;
+            this.pictureBxMainScreen.Click += new System.EventHandler(this.pictureBxMainScreen_Click);
             // 
             // btnStore
             // 

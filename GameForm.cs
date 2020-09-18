@@ -1,15 +1,11 @@
-﻿using System;
+﻿using CarDriver2.Properties;
+using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Media;
-using System.Text;
-using System.Threading.Tasks;
+using System.IO;
+using System.Reflection;
 using System.Windows.Forms;
-using WMPLib;
-using CarDriver2.Properties;
+
 
 namespace CarDriver2
 {
@@ -27,6 +23,7 @@ namespace CarDriver2
 
         private void GameForm_Load(object sender, EventArgs e)
         {
+            pictureBxMyCar.Load($"images\\{FileManager.Load_chosenCar().Name}.png");
             if (Settings.Default.Record != 0)
                 labelRecord.Text = Settings.Default.Record.ToString();
             GetPictureOfEnemy();
