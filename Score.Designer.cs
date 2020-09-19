@@ -103,7 +103,7 @@
             this.labelTotalSec.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.labelTotalSec.Font = new System.Drawing.Font("Impact", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelTotalSec.ForeColor = System.Drawing.Color.Red;
-            this.labelTotalSec.Location = new System.Drawing.Point(904, 74);
+            this.labelTotalSec.Location = new System.Drawing.Point(919, 74);
             this.labelTotalSec.Name = "labelTotalSec";
             this.labelTotalSec.Size = new System.Drawing.Size(77, 60);
             this.labelTotalSec.TabIndex = 126;
@@ -115,7 +115,7 @@
             this.label10.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label10.Font = new System.Drawing.Font("Impact", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label10.ForeColor = System.Drawing.Color.Red;
-            this.label10.Location = new System.Drawing.Point(884, 71);
+            this.label10.Location = new System.Drawing.Point(890, 67);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(35, 60);
             this.label10.TabIndex = 125;
@@ -315,7 +315,7 @@
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Impact", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label14.ForeColor = System.Drawing.Color.Yellow;
-            this.label14.Location = new System.Drawing.Point(306, 74);
+            this.label14.Location = new System.Drawing.Point(306, 67);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(35, 60);
             this.label14.TabIndex = 107;
