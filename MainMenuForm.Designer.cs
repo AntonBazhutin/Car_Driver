@@ -104,7 +104,6 @@
             // btnVolumeOnOff
             // 
             this.btnVolumeOnOff.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.btnVolumeOnOff.BackgroundImage = global::CarDriver2.Properties.Resources.volumeOn;
             this.btnVolumeOnOff.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnVolumeOnOff.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnVolumeOnOff.Font = new System.Drawing.Font("Agency FB", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

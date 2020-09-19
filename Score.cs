@@ -15,6 +15,19 @@ namespace CarDriver2
 
         private void Score_Load(object sender, EventArgs e)
         {
+            //labelStore.Parent = pictureBox1;
+            //labelStore.BackColor = Color.Transparent;
+
+            Label[] ll = new Label[] { label1, label10, label12, label13, label14, label2, label3, label4, label5, label6, label8, label9, labelHighestSpeed, labelLastCarSkin, labelLastCoins, labelLastGameInfo
+            ,labelLastMinutes,labelLastScore,labelLastSeconds,labelLastSpeed,labelRecord,labelTotalCoins,labelTotalMin,labelTotalScore,labelTotalSec};
+
+            foreach (var item in ll)
+            {
+                item.Parent = pictureBox1;
+                item.BackColor = Color.Transparent;
+            }
+
+            pbLastCar.Load($"images\\{FileManager.Load_Score().NameOfCar}.png");
 
             labelLastCoins.Text = FileManager.Load_Score().Coins.ToString();
             labelLastScore.Text = FileManager.Load_Score().Score.ToString();
@@ -88,6 +101,16 @@ namespace CarDriver2
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelTotalCoins_Click(object sender, EventArgs e)
         {
 
         }

@@ -19,7 +19,7 @@ namespace CarDriver2
         public MainMenu()
         {
             InitializeComponent();
-            mediaPlayer.URL = "theme_song.mp3";
+            mediaPlayer.URL = "sounds\\theme_song.mp3";
             mediaPlayer.enabled = true;
         }
 
@@ -94,13 +94,13 @@ namespace CarDriver2
         {
             if (clicked == false)
             {
-                btnVolumeOnOff.Image = Properties.Resources.volumeOff;
+                btnVolumeOnOff.Image = Image.FromFile("images\\volumeOff.png");
                 mediaPlayer.controls.pause();
                 clicked = true;
             }
             else
             {
-                btnVolumeOnOff.Image = Properties.Resources.volumeOn;
+                btnVolumeOnOff.Image = Image.FromFile("images\\volumeOn.png");
                 mediaPlayer.controls.play();
                 clicked = false;
             }
@@ -108,6 +108,8 @@ namespace CarDriver2
 
         private void MainForm_Load(object sender, EventArgs e)
         {
+            btnVolumeOnOff.Image = Image.FromFile("images\\volumeOn.png");
+
             string[] names = new string[] { "purchasedItems.dat", "score.dat", "score_2.dat", "chosenCar.dat" };
 
             foreach (var file in names)
@@ -121,7 +123,7 @@ namespace CarDriver2
                 FileManager.Save_chosenCar(new storeChosenCar("Blue Mustang", 0, true));
             fi = new FileInfo("score.dat");
             if (fi.Length == 0)
-                FileManager.Save_Score(new GameResult(0, 0, 0, 0, 0));
+                FileManager.Save_Score(new GameResult("Blue Mustang", 0, 0, 0, 0, 0));
             fi = new FileInfo("score_2.dat");
             if (fi.Length == 0)
                 FileManager.Save_TotalScore(new TotalGameInfo(0, 0, 0, 0, 0, 0));
@@ -135,27 +137,6 @@ namespace CarDriver2
             Settings.Default.Record = FileManager.Load_TotalScore().Record;
             Settings.Default.Coins = FileManager.Load_TotalScore().Coins;
             Settings.Default.Min = FileManager.Load_TotalScore().Min;
-            //if (File.Exists("score_2.dat") && File.Exists("score.dat"))
-            //{
-            //    FileManager.Load_Score();
-            //    FileManager.Load_TotalScore();
-            //    Settings.Default.Coins = FileManager.Load_TotalScore().Coins;
-            //    Settings.Default.Score = FileManager.Load_TotalScore().Score;
-            //    Settings.Default.Record = FileManager.Load_TotalScore().Record;
-            //    Settings.Default.Speed = FileManager.Load_TotalScore().Speed;
-            //    Settings.Default.Min = FileManager.Load_TotalScore().Min;
-            //    Settings.Default.Sec = FileManager.Load_TotalScore().Sec;
-
-            //    btnNewGame.Enabled = true;
-            //}
-            //else
-            //    btnNewGame.Enabled = false;
-
-            //if (!File.Exists("chosenCar.dat"))
-            //{
-            //    File.Create("chosenCar.dat").Close();
-            //    FileManager.Save_chosenCar(new storeChosenCar("Blue Mustang", 0, true));
-            //}
 
             mediaPlayer.controls.play();
         }

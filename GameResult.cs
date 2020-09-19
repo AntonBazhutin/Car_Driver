@@ -14,6 +14,12 @@ namespace CarDriver2
         private int speed;
         private int min;
         private int sec;
+        private string nameOfCar;
+        public string NameOfCar
+        {
+            get { return nameOfCar; }
+            set { nameOfCar = value; }
+        }
         public int Score
         {
             get { return score; }
@@ -39,8 +45,9 @@ namespace CarDriver2
             get { return sec; }
             set { sec = value; }
         }
-        public GameResult(int score, int coins, int speed, int min, int sec)
+        public GameResult(string nameOfcar,int score, int coins, int speed, int min, int sec)
         {
+            NameOfCar = nameOfcar;
             Score = score;
             Coins = coins;
             Speed = speed;

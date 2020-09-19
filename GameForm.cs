@@ -61,16 +61,16 @@ namespace CarDriver2
             {
                 int res = rand.Next(1, 4);
                 if (res == 1)
-                    pb[i].Image = Properties.Resources.other_car2;
+                    pb[i].Load("images\\Purple_Car.png");
                 else
                     if (res == 2)
-                    pb[i].Image = Properties.Resources.police;
+                    pb[i].Load($"images\\Police_Car.png");
                 else
                     if (res == 3)
-                    pb[i].Image = Properties.Resources.taxi;
+                    pb[i].Load("images\\Taxi.png");
                 else
                     if (res == 4)
-                    pb[i].Image = Properties.Resources.embulance;
+                    pb[i].Load("images\\Embulance.png");
                 pb[i].Visible = true;
             }
 
@@ -141,7 +141,7 @@ namespace CarDriver2
                 if (score > Settings.Default.Record)
                     Settings.Default.Record = score;
 
-                FileManager.Save_Score(new GameResult(score, coins, speed, minutes, seconds));
+                FileManager.Save_Score(new GameResult(FileManager.Load_chosenCar().Name, score, coins, speed, minutes, seconds));
                 FileManager.Save_TotalScore(new TotalGameInfo(Settings.Default.Record, Settings.Default.Score, Settings.Default.Coins, Settings.Default.Speed, Settings.Default.Min, Settings.Default.Sec));
 
                 this.Hide();

@@ -210,7 +210,6 @@
             // 
             // pictureBxEnemy1
             // 
-            this.pictureBxEnemy1.BackgroundImage = global::CarDriver2.Properties.Resources.embulance;
             this.pictureBxEnemy1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.pictureBxEnemy1.Location = new System.Drawing.Point(12, -21);
             this.pictureBxEnemy1.Name = "pictureBxEnemy1";
