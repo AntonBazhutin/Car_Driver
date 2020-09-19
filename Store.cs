@@ -13,7 +13,7 @@ namespace CarDriver2
         List<storeAbstractCar> listOfCars = new List<storeAbstractCar>();
         string[] NamesOfCars = new string[] { "Blue Mustang", "Green Cabrio", "Yellow Lambo", "Red Porsche" };
 
-        int[] CostOfCars = new int[] { 0, 50, 150, 500 };
+        int[] CostOfCars = new int[] { 0, 25, 45, 70 };
         int index = 0;
         public Store()
         {
